@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+
+    <button id="openDialogBtn">Add</button>
+
+    <!-- Define the dialog element -->
+    <dialog id="addDialog">
+        <h2>Add Item</h2>
+        <form id="addItemForm">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName">
+            <br>
+            <label for="itemDescription">Description:</label>
+            <textarea id="itemDescription" name="itemDescription"></textarea>
+            <br>
+            <button type="submit">Add Item</button>
+        </form>
+        <button id="closeDialog">Cancel</button>
+    </dialog>
+</body>
+
+</html>
