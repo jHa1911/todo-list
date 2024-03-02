@@ -1,12 +1,66 @@
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    max-width: 400px;
-    margin: 0 auto;
+:root {
+    --main-font-family: 'Inter', sans-serif;
+    --menu-padding: 0.4rem 0.4rem 0.4rem 2.8rem;
+    --menu-images-position: 10px;
+    --menu-icons-bgsize: 20px;
+    
 }
+
+body {
+    font-weight: 500;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+#content {
+    background-color: #777;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+}
+
+.header {
+    background-color: #f44336;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.5rem;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.navbar {
+    background-color: #fafafa;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.task-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+
+
+
+
 
 ul {
     list-style: none;
@@ -25,7 +79,11 @@ li {
 
 .delete-btn {
     cursor: pointer;
-    color: red;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
 .task-details {
@@ -46,8 +104,11 @@ li {
 }
 
 .add-task-btn {
+    position: fixed;
+    bottom: 15%;
+    right: 10%;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 34px;
     margin-left: 10px;
 }
 
@@ -63,4 +124,3 @@ li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
-

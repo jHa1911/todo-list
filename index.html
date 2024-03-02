@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>ToDo  List App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <div class="add-task-btn" onclick="openTaskFormDialog()">+</div>
-        <div class="task-form-dialog" id="taskFormDialog">
-            <input type="text" id="taskTitle" placeholder="Enter task title">
-            <input type="text" id="taskDescription" placeholder="Enter task description">
-            <input type="date" id="dueDate">
-            <select id="priority">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-            <button type="button" onclick="addTask()">Add Task</button>
-            <button type="button" onclick="closeTaskFormDialog()">Cancel</button>
-        </div>
-        <ul id="taskList"></ul>
+    <div id="content">
+        <header class="header">
+            <h1>Todo List App</h1>
+        </header>
+        <main class="main-container">
+        <!-- Navigation Bar on left side -->
+            <div class="navbar">
+                <h2>Home</h2>
+                <ul>
+                    <li>All Tasks</li>
+                    <li>Today</li>
+                    <li>Completed</li>
+                    <li>Important</li>
+                    <li>This Week</li>
+                </ul>
+                <h2>Projects</h2>
+                <ul>
+
+                </ul>
+            </div>
+        <!-- Task Form -->
+            <div class="task-container">
+                <div class="add-task-btn" onclick="openTaskFormDialog()">+</div>
+                <div class="task-form-dialog" id="taskFormDialog">
+                    <input type="text" id="taskTitle" placeholder="Enter task title">
+                    <input type="text" id="taskDescription" placeholder="Enter task description">
+                    <input type="date" id="dueDate">
+                    <select id="priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <button type="button" onclick="addTask()">Add Task</button>
+                    <button type="button" onclick="closeTaskFormDialog()">Cancel</button>
+                </div>
+                <div>
+                    <ul id="taskList"></ul>
+                </div>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
